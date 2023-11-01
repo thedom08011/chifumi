@@ -1,0 +1,66 @@
+body, html {
+    height: 100%;
+	margin : 0;
+    background-color: #B6D8F2;
+    color: #00353F;
+	font-family: 'Montserrat', sans-serif; /*  'sans-serif' est une famille de police de repli */
+}
+
+body{
+	display: flex; /* Utilisez flexbox pour la mise en page */
+    flex-direction: column; /* Organisez le contenu verticalement */
+    justify-content: space-between; /* Espacement entre le contenu et le footer */
+	padding: 30px;
+}
+
+.content {
+    flex: 1; /* Assurez-vous que le contenu prend tout l'espace disponible, repoussant le footer vers le bas */
+}
+
+.container{
+	display : flex;
+	padding: 50px; /* Ajoute un espace de 10px de chaque côté. Ajustez selon vos besoins. */
+	margin-top : 20px;
+	justify-content: space-between;
+	background-color : #F7F6CF;
+}
+
+.pointer{
+	cursor:pointer;
+}
+
+.left, .right {
+    box-sizing: border-box;
+	font-size: 24px;
+}
+/* Pas besoin des marges pour .left et .right car le padding du .container les écarte déjà du bord. */
+
+.picture img{
+	width : 15%;
+	height:15%;	
+}
+
+.picture {
+    display: flex;           /* Active Flexbox pour ce conteneur */
+    align-items: center;     /* Centre verticalement */
+	text-align: center;
+	flex-direction: column;  /* Organise les enfants de .picture verticalement */
+   
+}
+
+.picture p{
+	 margin-bottom: 20px;     /* Ajoute un espace entre le texte et les images. Ajustez selon vos besoins */
+	 margin: 10px 15px;          /* Ajoute un espace entre les images. Ajustez selon vos besoins. */
+	 font-size: 40px; /* taille du texte */
+	font-weight : bold;
+}
+
+.ok{
+	background-color:#F4CFDF;
+}
+
+.good{
+	text-align:center;
+	font-size : 40px;
+	font-weight:bold;
+}
