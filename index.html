@@ -10,12 +10,13 @@
 <body>
 <div>
 	<div class="container">
-		<div class="left">Computer : 0</div>
-		<div class="right">Me : 0</div>
+		<div class="left" id="scorePlayerOne">Me : 0</div>
+		<div class="right" id="scorePlayerTwo">Computer : 0</div>
 	</div>
 	
 	<div class="picture">
 		<p>fais ton choix !</p>
+		<p id="resultMessage"></p>
 		<div class="pointer">
 			<img id="image1" src="paper.png" alt="feuille">
 			<img id="image2" src="rock.png" alt="pierre">
@@ -23,14 +24,20 @@
 		</div>
 	</div>
 	
+	<div class="results-container">
+		<div id="text"> </div>
+		<div id="text2"> </div>
+	</div>
+	<button id="reset">reset score !</button>
+
 		
-	<div>
+	<div id="resume">
 		<p>Pierre-papier-ciseaux est un jeu effectué avec les mains et opposant deux joueurs.
 		Il possède de nombreux noms alternatifs, notamment en variant l'ordre des termes ou en remplaçant certains mots comme « papier » par « feuille » ou « pierre » par « caillou » ou « roche ».
 		Le terme chifoumi est également une appellation courante.
 D'autres noms existent en fonction des variantes du jeu.</p>
 	</div>
-	
+	<div id="rule">
 		<h2>Règle : comment se déroule une partie de pierre feuille ciseaux ?</h2>
 		<p>
 			L’objectif et le mécanisme de jeu est simple, il faut affronter un adversaire en utilisant l’une des trois « armes »: la pierre, la feuille ou la paire de ciseaux. 
@@ -41,6 +48,7 @@ D'autres noms existent en fonction des variantes du jeu.</p>
 			<li>Les ciseaux l'emportent face à la feuille qu'ils coupent</li>
 			<li>La feuille bat la pierre en l'enveloppant</li>
 		</ul>
+	</div>
 	</div>
 	
     <div class="ok">

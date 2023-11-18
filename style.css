@@ -36,8 +36,10 @@ body{
 /* Pas besoin des marges pour .left et .right car le padding du .container les écarte déjà du bord. */
 
 .picture img{
-	width : 15%;
-	height:15%;	
+	max-width: 12%;
+    max-height: 12%;
+    width: auto;
+    height: auto;
 }
 
 .picture {
@@ -57,10 +59,49 @@ body{
 
 .ok{
 	background-color:#F4CFDF;
+	margin-top: 3%;
 }
 
 .good{
 	text-align:center;
 	font-size : 40px;
 	font-weight:bold;
+}
+
+.results-container {
+    display: flex;
+    justify-content: space-between; /* Espacement entre les résultats */
+}
+
+#resume{
+	margin-top: 5%;
+}
+#text {
+	/*display: none;*/
+	font-weight: bold;
+	color: red;
+	flex-grow: 1; /* Permet à l'élément de croître pour remplir l'espace disponible */
+    text-align: left; /* Aligner le texte à gauche */
+    margin-right: 10px; /* Ajoute un peu d'espace entre les deux divs */
+}
+#text2 {
+	display: block;
+	font-weight: bold;
+	color: red;
+	flex-grow: 1; /* Permet à l'élément de croître pour remplir l'espace disponible */
+    text-align: right; /* Aligner le texte à droite */
+    margin-left: 10px; /* Ajoute un peu d'espace entre les deux divs */
+}
+#reset{
+	margin-left: auto;
+    margin-right: auto;
+	display: block;
+	margin-top: 2%;
+}
+#resultMessage{
+	color: red;
+}
+
+#rule{
+	margin-top: 5%;
 }
