@@ -61,11 +61,9 @@ document.addEventListener('DOMContentLoaded', function() {
 				joueur2ResultText = 'Erreur: Choix non reconnu.';
 				break;
 		}
-		console.log('Le texte à afficher pour le joueur 2 est:', joueur2ResultText);
 		var resultJoueur2 = document.getElementById('text2');
 		resultJoueur2.innerText = joueur2ResultText;
 		resultJoueur2.style.display = 'block';
-		console.log('joueur 2 a choisi', choixJoueur2);
 
 		 // Appelle la fonction pour déterminer le gagnant avec les choix des deux joueurs.
 		 determineWinner(choixJoueur1, choixJoueur2);
@@ -79,11 +77,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// Fonction qui compare les choix des joueurs et détermine le gagnant.
 	function determineWinner(choixJoueur1, choixJoueur2) {
-		console.log("choixJoueur1:", choixJoueur1, "choixJoueur2:", choixJoueur2);
 		let message = "";
 		if (choixJoueur1 === choixJoueur2) {
 			message = "Égalité!";
-			console.log("pourquoi ?")
 		} else if (
 			(choixJoueur1 === 'feuille' && choixJoueur2 === 'pierre') ||
 			(choixJoueur1 === 'pierre' && choixJoueur2 === 'ciseaux') ||
@@ -103,8 +99,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 	function updateScore() {
-		document.getElementById('scorePlayerOne').textContent = "Computer: " + scorePlayer1;
-		document.getElementById('scorePlayerTwo').textContent = "Me: " + scorePlayer2;
+		document.getElementById('scorePlayerOne').textContent = "Me: " + scorePlayer1;
+		document.getElementById('scorePlayerTwo').textContent = "Computer: " + scorePlayer2;
 	}
 	
 	function resetScore(){
@@ -112,7 +108,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		scorePlayer2 = 0;
 		document.getElementById("scorePlayerOne").textContent = "Me : 0";
 		document.getElementById("scorePlayerTwo").textContent = "Computer : 0";
-		resetScore();
+		document.getElementById("resultMessage").textContent = "";
+		document.getElementById("resultMessage").textContent = "";
+		document.getElementById("text").textContent = "";
+		document.getElementById("text2").textContent = "";
 		}
 	
 }); // Fin de l'écouteur d'événement 'DOMContentLoaded'.
